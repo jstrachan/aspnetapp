@@ -5,10 +5,13 @@ replicaCount: 2
 image:
   pullPolicy: IfNotPresent
 service:
-  name: aspnetapp
+  name: REPLACE_ME_APP_NAME
   type: ClusterIP
   externalPort: 8080
   internalPort: 80
+  annotations:
+    fabric8.io/expose: "true"
+    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
 resources:
   limits:
     cpu: 1
