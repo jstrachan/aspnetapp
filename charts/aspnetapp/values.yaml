@@ -5,9 +5,9 @@ replicaCount: 2
 image:
   pullPolicy: IfNotPresent
 service:
-  name: REPLACE_ME_APP_NAME
+  name: aspnetpapp
   type: ClusterIP
-  externalPort: 8080
+  externalPort: 5000
   internalPort: 80
   annotations:
     fabric8.io/expose: "true"
